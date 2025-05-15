@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Happy Birthday, Superstar!</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js/dist/fireworks.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: linear-gradient(to bottom, #ffe3ec 0%, #fff4d2 100%);
+            overflow-x: hidden;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: linear-gradient(to right, #f77062, #fe5196);
+            color: white;
+            padding: 2em;
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-shadow: 2px 2px #b22e5e;
+        }
+
+        #banner {
+            display: inline-block;
+            margin: 2em auto;
+            background: #ff6f91;
+            padding: 0.8em 1.5em;
+            border-radius: 25px;
+            color: white;
+            font-size: 1.5em;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            max-width: 90%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #banner:hover {
+            transform: scale(1.05);
+            background: linear-gradient(45deg, #ff8fa1, #ff6f91);
+            box-shadow: 0 0 15px rgba(255, 111, 145, 0.5), 0 0 10px rgba(255, 111, 145, 0.2) inset;
+        }
+
+        main {
+            padding: 2em;
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        section {
+            margin-bottom: 2.5em;
+            background: white;
+            padding: 1.5em;
+            border-radius: 16px;
+            box-shadow: 0 0 10px rgba(255, 111, 145, 0.2);
+        }
+
+        .event {
+            background: #fff0f5;
+            border-left: 6px solid #ff69b4;
+            padding: 1em;
+            margin: 1em 0;
+            border-radius: 12px;
+        }
+
+        footer {
+            background: #fe5196;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            font-size: 0.9em;
+        }
+
+        #fireworks-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        h2 {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="fireworks-container"></div>
+
+    <header>🎉 Happy Birthday, Heather! 🎉</header>
+
+    <div style="text-align: center;">
+        <div id="banner">🎂 Click Me For Celebration! 💖</div>
+    </div>
+
+    <main>
+
+        <section>
+            <h2 onclick="scrollToSection(this)">In the last 5 years...</h2>
+            <div class="event">"We talked through so many things. Shared so many memories even if it is just over a dark
+                screen - they can never be forgotten " 😆</div>
+            <div class="event">"We have been in a rollercoaster of emotions - we laughed, cried and yelled at each
+                other, but at the end of the day.. We came running back to each other. "</div>
+            <div class="event">"We have been lost over multiple things? Or were we just exploring creatively?"🤔</div>
+            <div class="event">"We discovered new hobbies, shared countless laughs, and grew stronger together with each
+                passing day." 🌟</div>
+            <div class="event">"Through every challenge, we found a way to support and uplift each other, proving that
+                love conquers all." 💪❤️</div>
+            <h4>Here's to many more birthdays filled with laughter, love, and unforgettable memories. 🎉🎂</h4>
+        </section>
+
+        <section>
+            <h2 onclick="scrollToSection(this)">💖 My Message to You</h2>
+            <p>
+                You know, I could write a whole book about how amazing you are, but let’s keep it short and sweet. <br>
+                You make every day brighter, and I’m so grateful to have you by my side. Your laughter is my favorite
+                sound, and your smile lights up even the darkest days. <br>
+                I love how you can turn the most mundane moments into an adventure. Whether we’re just talking about
+                random stuff or just sitting in comfortable silence, every second with you is a treasure. <br>
+                You inspire me to be better and, to dream bigger. Your kindness, strength, and passion for life are
+                truly contagious. I admire your ability to find joy in the little things and to spread happiness
+                wherever you go. <br>
+                I love your quirks, your silly jokes and the topics you randomly bring up. You make life fun and
+                exciting, and I can’t imagine going through this crazy world without you. You’re my partner in crime, my
+                confidant, and my best friend. <br>
+                So, on this special day, I want you to know how much you mean to me. You are loved beyond measure, and I
+                am so proud of the person you are. You deserve all the happiness in the world, and I promise to always
+                be here to support you, cheer you on. <br>
+                I hope this year brings you as much joy and laughter as you bring to my life. May your dreams come true,
+                and may you continue to shine like the star you are. <br>
+                Remember, you are capable of achieving anything you set your mind to. You have the strength and
+                determination to overcome any obstacle that comes your way. I believe in you wholeheartedly, and I will
+                always be your biggest fan. <br>
+                So, let’s make this birthday unforgettable! Let’s celebrate you and all the incredible things that make
+                you who you are. You are unique, special, and one of a kind. There’s no one else like you in this world,
+                and that’s what makes you so extraordinary. <br>
+                Thank you for being exactly who you are and for everything you do. Thank you for being my rock, my
+                support, and my love. I cherish every moment we spend together, and I look forward to creating even more
+                beautiful memories with you in the future. <br>
+                I know I'm being cheesy at this point. But I just want to say that you are the best thing that has ever
+                happened to me. <br>
+                Happy Birthday, my love. 🎈🎊
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        Built with love, chaos, and fireworks 💕🎆
+    </footer>
+
+    <script>
+        function scrollToSection(element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        let clickCount = 0;
+        document.addEventListener('click', () => {
+            clickCount++;
+            if (clickCount >= 3) {
+                alert("YAY!");
+                confetti({
+                    particleCount: 500,
+                    spread: 120,
+                    origin: { y: 0.5 }
+                });
+                clickCount = 0;
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('fireworks-container');
+            const banner = document.getElementById("banner");
+
+            if (typeof Fireworks !== 'undefined') {
+                const fireworks = new Fireworks(container, {
+                    hue: { min: 0, max: 360 },        // Color range
+                    delay: { min: 15, max: 20 },      // Time between each explosion
+                    rocketsPoint: 50,                 // Position of explosion, 50 is the middle
+                    speed: 2,                         // Rocket speed
+                    acceleration: 1.04,               // Rocket acceleration
+                    friction: 0.98,                   // Slowdown after explosion
+                    gravity: 1.5,                     // How fast particles fall
+                    particles: 250,                   // Number of particles per explosion
+                    trace: 10,                         // Trace length of the rockets
+                    explosion: 10,                     // How big the explosion is
+                    autoresize: true,                 // Auto-resize with window
+                    brightness: { min: 50, max: 180 }, // Brightness of the particles
+                    decay: { min: 0.015, max: 0.03 }, // How fast they disappear
+                    mouse: { click: true, move: false, max: 1 }
+                });
+
+                banner.addEventListener("click", () => {
+                    fireworks.start();
+                    setTimeout(() => fireworks.stop(), 6000);
+                    confetti({
+                        particleCount: 1500,
+                        spread: 120,
+                        origin: { y: 0.5 }
+                    });
+                });
+
+            }
+        });
+    </script>
+
+    <div id="balloons-container"></div>
+
+    <script>
+        // Function to create a single balloon
+        function createBalloon() {
+            const balloon = document.createElement('div');
+            balloon.className = 'balloon';
+            balloon.style.left = `${Math.random() * 100}%`;
+            balloon.style.animationDuration = `${Math.random() * 3 + 2}s`;
+
+            // Randomize color
+            const colors = ['#ff69b4', '#ff8fa1', '#ffb3c6', '#ffe3ec', '#ff6f91'];
+            balloon.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+            // Append balloon to container
+            document.getElementById('balloons-container').appendChild(balloon);
+
+            // Remove balloon after it floats out of view
+            setTimeout(() => balloon.remove(), 5000);
+        }
+
+        // Generate balloons every 500ms
+        setInterval(createBalloon, 500);
+    </script>
+
+    <!-- 🎈 Balloons Styling -->
+    <style>
+        #balloons-container {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .balloon {
+            position: absolute;
+            bottom: -50px;
+            width: 40px;
+            height: 60px;
+            border-radius: 50%;
+            animation: rise 5s linear forwards;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes rise {
+            0% {
+                transform: translateY(0);
+                opacity: 0.7;
+            }
+
+            100% {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+        }
+    </style>
+
+<!-- 🎈 Enhanced Balloons Container -->
+<div id="balloons-container"></div>
+
+<!-- 🎉 Confetti Library -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+<script>
+    // Function to create a single balloon
+    function createBalloon() {
+        const balloon = document.createElement('div');
+        balloon.className = 'balloon';
+
+        // Random horizontal position and animation duration
+        balloon.style.left = `${Math.random() * 100}%`;
+        balloon.style.animationDuration = `${Math.random() * 3 + 4}s`;
+
+        // Randomize color gradient
+        const colors = [
+            ['#ff69b4', '#ff8fa1'],
+            ['#ff8fa1', '#ffe3ec'],
+            ['#ff6f91', '#ffb3c6'],
+            ['#ffb3c6', '#ffe3ec']
+        ];
+        const gradient = colors[Math.floor(Math.random() * colors.length)];
+        balloon.style.background = `linear-gradient(45deg, ${gradient[0]}, ${gradient[1]})`;
+
+        // Create the string
+        const string = document.createElement('div');
+        string.className = 'balloon-string';
+        balloon.appendChild(string);
+
+        // Attach pop event
+        balloon.addEventListener('click', (event) => {
+            event.stopPropagation();
+            balloon.style.animation = "pop 0.3s ease-out forwards";
+
+            // Confetti burst at the balloon's position
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: {
+                    x: event.clientX / window.innerWidth,
+                    y: event.clientY / window.innerHeight
+                }
+            });
+
+            // Remove balloon after animation
+            setTimeout(() => balloon.remove(), 300);
+        });
+
+        // Append balloon to container
+        document.getElementById('balloons-container').appendChild(balloon);
+
+        // Remove balloon after it floats out of view
+        setTimeout(() => balloon.remove(), 10000);
+    }
+
+    // Generate balloons every 600ms
+    setInterval(createBalloon, 600);
+</script>
+
+<!-- 🎈 Enhanced Balloons Styling -->
+<style>
+    #balloons-container {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+        pointer-events: none;
+    }
+
+    .balloon {
+        position: absolute;
+        bottom: -100px;
+        width: 50px;
+        height: 70px;
+        border-radius: 50%;
+        animation: rise 8s linear forwards, bounce 0.6s ease-in-out;
+        box-shadow: inset -2px -3px 4px rgba(255, 255, 255, 0.3), 0 8px 15px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        pointer-events: auto;
+    }
+
+    .balloon-string {
+        position: absolute;
+        width: 2px;
+        height: 80px;
+        background: #ccc;
+        bottom: -80px;
+        left: 24px;
+        animation: swing 1.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes rise {
+        0% {
+            transform: translateY(0);
+            opacity: 0.8;
+        }
+
+        100% {
+            transform: translateY(-110vh);
+            opacity: 0;
+        }
+    }
+
+    @keyframes bounce {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    @keyframes swing {
+        0% {
+            transform: rotate(-5deg);
+        }
+
+        100% {
+            transform: rotate(5deg);
+        }
+    }
+
+    @keyframes pop {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        100% {
+            transform: scale(1.5);
+            opacity: 0;
+        }
+    }
+</style>
+
+
+</body>
+
+</html>
